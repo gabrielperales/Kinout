@@ -30,9 +30,10 @@ KINOUT.Events = ((knt, $$, undefined_) ->
         if $$.isMobile()
             $$(document).on EVENTS.TOUCH, _onTouch, false
         else
-            $$(document).on EVENTS.KEYDOWN, _onKeyDown, false
-            $$(document).on EVENTS.CLICK, _onClick, false
-            $$(document).on EVENTS.MOUSEWHEEL, _onWheel, false
+            $$(document)
+                .on EVENTS.KEYDOWN, _onKeyDown, false
+                .on EVENTS.CLICK, _onClick, false
+                .on EVENTS.MOUSEWHEEL, _onWheel, false
 
         #$$(window).on EVENTS.HASHCHANGE, _onHashChange, false
         return
